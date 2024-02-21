@@ -26,4 +26,68 @@ Next.js est un framework JavaScript open source qui permet de construire des app
 
 # Installer nextJS
 
+Pour installer Next.js, vous devez suivre quelques étapes simples. Voici comment procéder :
+
+### Étapes d'installation :
+
+1. **Créer un nouveau projet** : Ouvrez votre terminal et créez un nouveau répertoire pour votre projet Next.js.
+
+   ```bash
+   mkdir mon-projet-nextjs
+   cd mon-projet-nextjs
+   ```
+
+2. **Initialiser un nouveau projet Node.js** : Utilisez npm ou yarn pour initialiser un nouveau projet Node.js. Assurez-vous d'avoir Node.js installé sur votre machine.
+
+   ```bash
+   npm init -y
+   # ou
+   yarn init -y
+   ```
+
+3. **Installer Next.js** : Utilisez npm ou yarn pour installer Next.js en tant que dépendance de développement dans votre projet.
+
+   Avec npm :
+
+   ```bash
+   npm install next react react-dom
+   ```
+
+   Avec yarn :
+
+   ```bash
+   yarn add next react react-dom
+   ```
+
+4. **Ajouter des scripts au package.json** : Modifiez votre fichier `package.json` pour ajouter des scripts qui vous permettront de démarrer et de construire votre application Next.js.
+
+   ```json
+   "scripts": {
+       "dev": "next dev",
+       "build": "next build",
+       "start": "next start"
+   }
+   ```
+
+### Exécuter votre application Next.js :
+
+- **Mode développement** : Pour exécuter votre application en mode développement, utilisez la commande `npm run dev` ou `yarn dev`. Cela démarrera un serveur de développement local.
+
+   ```bash
+   npm run dev
+   # ou
+   yarn dev
+   ```
+
+- **Mode production** : Une fois que vous êtes prêt à déployer votre application, utilisez la commande `npm run build` ou `yarn build` pour construire votre application, puis `npm start` ou `yarn start` pour démarrer le serveur en mode production.
+
+   ```bash
+   npm run build
+   npm start
+   # ou
+   yarn build
+   yarn start
+   ```
+
+Maintenant, votre application Next.js est prête à être développée et déployée ! Assurez-vous de consulter la documentation officielle de Next.js pour en savoir plus sur les fonctionnalités et les bonnes pratiques de développement.
 
