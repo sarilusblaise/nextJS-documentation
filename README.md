@@ -91,3 +91,78 @@ Pour installer Next.js, vous devez suivre quelques étapes simples. Voici commen
 
 Maintenant, votre application Next.js est prête à être développée et déployée ! Assurez-vous de consulter la documentation officielle de Next.js pour en savoir plus sur les fonctionnalités et les bonnes pratiques de développement.
 
+# Styliser your nextjs project
+
+Dans Next.js, vous avez plusieurs options pour styliser votre projet, allant des méthodes traditionnelles aux solutions plus modernes. Voici quelques-unes des méthodes couramment utilisées :
+
+### 1. CSS traditionnel
+Vous pouvez utiliser des fichiers CSS traditionnels pour styliser vos composants. Vous pouvez importer ces fichiers directement dans vos composants ou les inclure dans le fichier HTML principal de votre application.
+
+Exemple :
+```css
+/* styles.css */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+```
+
+### 2. CSS Modules
+Next.js prend en charge les CSS Modules, ce qui vous permet de définir des styles spécifiques à un composant qui ne seront appliqués qu'à ce composant.
+
+Exemple :
+```css
+/* button.module.css */
+.button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+}
+```
+```javascript
+// Button.js
+import styles from './button.module.css';
+
+function Button() {
+  return <button className={styles.button}>Click Me</button>;
+}
+```
+
+### 3. Styled-components
+Vous pouvez utiliser des bibliothèques comme styled-components pour écrire des styles directement dans vos composants sous forme de composants React.
+
+Exemple :
+```javascript
+// Button.js
+import styled from 'styled-components';
+
+const Button = styled.button`
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+`;
+
+export default Button;
+```
+
+### 4. Tailwind CSS
+Tailwind CSS est une bibliothèque de classes utilitaires qui vous permet de styliser vos composants en utilisant des classes prédéfinies.
+
+Exemple :
+```javascript
+// Button.js
+function Button() {
+  return <button className="bg-blue-500 text-white px-4 py-2 rounded">Click Me</button>;
+}
+```
+
+### Ressources supplémentaires :
+- [Documentation officielle de Next.js sur le stylage](https://nextjs.org/docs/basic-features/built-in-css-support)
+- [Documentation de CSS Modules](https://github.com/css-modules/css-modules)
+- [Documentation de styled-components](https://styled-components.com/docs)
+- [Documentation de Tailwind CSS](https://tailwindcss.com/docs)
+
