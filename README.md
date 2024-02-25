@@ -91,7 +91,7 @@ Pour installer Next.js, vous devez suivre quelques étapes simples. Voici commen
 
 Maintenant, votre application Next.js est prête à être développée et déployée ! Assurez-vous de consulter la documentation officielle de Next.js pour en savoir plus sur les fonctionnalités et les bonnes pratiques de développement.
 
-# Styliser your nextjs project
+# Styliser votre nextjs project
 
 Dans Next.js, vous avez plusieurs options pour styliser votre projet, allant des méthodes traditionnelles aux solutions plus modernes. Voici quelques-unes des méthodes couramment utilisées :
 
@@ -166,3 +166,49 @@ function Button() {
 - [Documentation de styled-components](https://styled-components.com/docs)
 - [Documentation de Tailwind CSS](https://tailwindcss.com/docs)
 
+
+
+Dans Next.js, les mises en page (layouts) sont des composants React utilisés pour envelopper le contenu commun à toutes ou à plusieurs pages de votre application. Ils permettent de maintenir une structure et un style cohérents à travers votre site. Voici comment vous pouvez les utiliser :
+
+### Création d'un Layout
+Tout d'abord, vous devez créer un composant qui servira de layout pour votre application. Ce composant peut contenir des éléments tels que l'en-tête, la barre de navigation, le pied de page, etc.
+
+Exemple de structure de layout de base :
+
+```javascript
+// components/Layout.js
+import Head from 'next/head';
+
+const Layout = ({ children }) => (
+  <div>
+    <Head>
+      <title>Titre de votre application</title>
+      {/* Autres métadonnées */}
+    </Head>
+    <header>
+      {/* Barre de navigation, logo, etc. */}
+    </header>
+    <main>{children}</main>
+    <footer>
+      {/* Pied de page, liens de navigation, etc. */}
+    </footer>
+  </div>
+);
+
+export default Layout;
+```
+
+### Utilisation du Layout dans vos pages
+Ensuite, vous pouvez envelopper le contenu spécifique à chaque page avec le Layout que vous avez créé. Vous pouvez le faire en important et en utilisant le composant Layout dans chaque page.
+
+Exemple :
+
+
+### Avantages de l'utilisation des Layouts
+- **Consistance visuelle**: Les Layouts permettent de maintenir une apparence cohérente sur toutes les pages de votre application.
+- **Facilité de gestion**: En regroupant les éléments communs dans un Layout, vous facilitez la gestion et la mise à jour de votre application.
+
+### Ressources supplémentaires :
+- [Documentation officielle de Next.js sur les Layouts](https://nextjs.org/docs/basic-features/layouts)
+
+En utilisant des Layouts dans Next.js, vous pouvez créer des applications web plus organisées et faciles à gérer, tout en garantissant une expérience utilisateur cohérente à travers différentes pages.
